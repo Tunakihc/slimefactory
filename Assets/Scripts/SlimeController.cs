@@ -6,7 +6,10 @@ public class SlimeController : MonoBehaviour
 {
     [HideInInspector]
     public bool IsActivated = false;
-
+    [HideInInspector]
+    public int Size;
+    
+    [Header("Movement")]
     [SerializeField] private Rigidbody _body;
     [SerializeField] private float _speed;
     [SerializeField] private float _maxAngularVelocity;
@@ -16,6 +19,11 @@ public class SlimeController : MonoBehaviour
     [SerializeField] private LayerMask _bonusObjects;
     [SerializeField] private GameObject _collisionEmmiter;
     [SerializeField] private Transform _view;
+
+    [Header("Animation")]
+    [SerializeField] private float _jumpHeight;
+    [SerializeField] private AnimationCurve _jumpCurve;
+    [SerializeField] private float _jumpTime;
 
     private Action<SlimeController> _onAddSlime;
     private Action<SlimeController> _onDeath;
@@ -51,20 +59,36 @@ public class SlimeController : MonoBehaviour
         dir.y = 0;
         dir = dir.normalized;
 
-        var _power = Mathf.Clamp(Vector3.Distance(_body.position, _target.position) / _maxTargetDistance, 0, 1);
+        var _power = Mathf.Clamp(Vector3.Distance(_body.position, _target.position) / 1, 0, 1);
+        var targetVelocity = dir * (_speed * _power);
 
-        var targetVelocity = dir * (_speed * (1 + _power));
-        
         targetVelocity.y = -9.8f;
-        _body.velocity = Vector3.SmoothDamp(_body.velocity, targetVelocity, ref _velocity, 0.1f);
+        _body.velocity = Vector3.SmoothDamp(_body.velocity, targetVelocity, ref _velocity, 0.05f);
 
         if (Vector3.Distance(_body.position, _target.position) > _maxTargetDistance) 
             OnTargetLoose();
     }
 
+    private Vector3 _prevPos;
+    private float _jumpProgress;
     void Update()
     {
         _view.rotation = quaternion.identity;
+
+        var currentSpeed = Vector3.Distance(transform.position, _prevPos) / Time.deltaTime;
+
+        if (currentSpeed > 0)
+        {
+            _jumpProgress += Time.deltaTime * (_jumpTime * currentSpeed);
+            
+            _view.position = Vector3.Lerp(transform.position,  transform.position + Vector3.up * _jumpHeight,
+                _jumpCurve.Evaluate(_jumpProgress));
+        }
+
+        _prevPos = transform.position;
+
+        if (_jumpProgress > 1)
+            _jumpProgress = 0;
     }
 
     private void OnCollisionEnter(Collision other)

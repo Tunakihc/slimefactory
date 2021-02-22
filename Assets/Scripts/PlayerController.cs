@@ -66,9 +66,6 @@ public class PlayerController : MonoBehaviour
         if (isTouched)
         {
             var touchPos = Input.touchCount > 0 ? Input.touches[0].position : ((Vector2)Input.mousePosition);
-
-            
-
             
             var screenPos = new Vector3(touchPos.x, touchPos.y,Vector3.Distance(Camera.main.transform.position, transform.position));
             
@@ -124,6 +121,8 @@ public class PlayerController : MonoBehaviour
         for (int i = 0; i < _transforms.Count; i++)
         {
             if(_transforms[i].gameObject.activeSelf) continue;
+            
+            _transforms[i].gameObject.SetActive(true);
 
             return _transforms[i];
         }
