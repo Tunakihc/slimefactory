@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class SlimeController : MonoBehaviour
@@ -14,7 +15,8 @@ public class SlimeController : MonoBehaviour
     [SerializeField] private LayerMask _slimeObjects;
     [SerializeField] private LayerMask _bonusObjects;
     [SerializeField] private GameObject _collisionEmmiter;
-    
+    [SerializeField] private Transform _view;
+
     private Action<SlimeController> _onAddSlime;
     private Action<SlimeController> _onDeath;
 
@@ -58,6 +60,11 @@ public class SlimeController : MonoBehaviour
 
         if (Vector3.Distance(_body.position, _target.position) > _maxTargetDistance) 
             OnTargetLoose();
+    }
+
+    void Update()
+    {
+        _view.rotation = quaternion.identity;
     }
 
     private void OnCollisionEnter(Collision other)
