@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
         public SlimeInfo(SlimeController controller, Transform target)
         {
             Slime = controller;
+            Slime.IsActivated = true;
+            
             Target = target;
             
             Slime.SetTarget(Target);
@@ -29,25 +31,34 @@ public class PlayerController : MonoBehaviour
     List<SlimeInfo> _slimes = new List<SlimeInfo>();
     List<Transform> _transforms = new List<Transform>();
 
+    private bool _isEnabled;
+
     private Transform _slimesControllerObject;
 
-    void Awake()
+    void Start()
     {
         Input.simulateMouseWithTouches = true;
         
         _slimesControllerObject = new GameObject("SlimesController").transform;
         _slimesControllerObject.SetParent(transform);
         _slimesControllerObject.localPosition = Vector3.zero;
+    }
+
+    public void Play()
+    {
+        _isEnabled = true;
         
         for (int i = 0; i < _startSlimes.Length; i++)
         {
+            _startSlimes[i]._controller = this;
             AddSlime(_startSlimes[i]);
+            _startSlimes[i].GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
     private void Update()
     {
-        if(_slimesControllerObject == null) return;
+        if(_slimesControllerObject == null || !_isEnabled) return;
         
         transform.position += transform.forward * Time.deltaTime * _speed;
 

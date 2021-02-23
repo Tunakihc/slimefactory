@@ -1,27 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Visartech.Levels;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField] private SlimeController[] _slimes;
+    [SerializeField] private int _testLevel;
+    [SerializeField] private LevelsConfig _levels;
     [SerializeField] private PlayerController _controller;
-    [SerializeField] private float _levelDistance = 200;
-    
-    // Start is called before the first frame update
+
+    [SerializeField] private TextAsset _startPattern;
+    [SerializeField] private TextAsset _endPattern;
+
+    private ObjectsPool _pool;
+    private LevelSpawner _spawner;
+
     void Start()
     {
-        for (int i = 0; i < _slimes.Length; i++)
-        {
-            if(_slimes[i] != null)
-                _slimes[i].Init(_controller.AddSlime, _controller.RemoveSlime);       
-        }
+        _pool = new ObjectsPool(transform);
+        _spawner = new LevelSpawner(new GameObject("_LevelSpawnerTarget").transform, _pool);
+        
+        PlayLevel(_levels.LevelConfigs[_testLevel]);
+    }
+
+    public void PlayLevel(LevelConfig config)
+    {
+        var list = config.TextAssets.ToList();
+        list.Insert(0, _startPattern);
+        list.Add(_endPattern);
+        
+        _spawner.LoadLevel(list);
+        _controller.Play();
     }
 
     void Update()
     {
-        if (_controller.transform.position.z > _levelDistance)
-            SceneManager.LoadScene(0);
+        _spawner.OnDistanceChanged(_controller.transform.position);
     }
 }

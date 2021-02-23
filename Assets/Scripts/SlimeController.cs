@@ -2,7 +2,7 @@ using System;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class SlimeController : MonoBehaviour
+public class SlimeController : PoolObject
 {
     [HideInInspector]
     public bool IsActivated = false;
@@ -25,23 +25,18 @@ public class SlimeController : MonoBehaviour
     [SerializeField] private AnimationCurve _jumpCurve;
     [SerializeField] private float _jumpTime;
 
-    private Action<SlimeController> _onAddSlime;
-    private Action<SlimeController> _onDeath;
-
     Transform _target;
     private Vector3 _prevPosition;
     private Vector3 _velocity;
+
+    [HideInInspector]
+    public PlayerController _controller;
 
     private void Awake()
     {
         _body.maxAngularVelocity = _maxAngularVelocity;
         _collisionEmmiter.SetActive(false);
-    }
-
-    public void Init(Action<SlimeController> onAddSlime,  Action<SlimeController> onDeath)
-    {
-        _onAddSlime = onAddSlime;
-        _onDeath = onDeath;
+        _body.isKinematic = true;
     }
 
     public void SetTarget(Transform target)
@@ -81,7 +76,7 @@ public class SlimeController : MonoBehaviour
         {
             _jumpProgress += Time.deltaTime * (_jumpTime * currentSpeed);
             
-            _view.position = Vector3.Lerp(transform.position,  transform.position + Vector3.up * _jumpHeight,
+            _view.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * _jumpHeight,
                 _jumpCurve.Evaluate(_jumpProgress));
         }
 
@@ -99,26 +94,39 @@ public class SlimeController : MonoBehaviour
             OnDeath();
 
         if (_slimeObjects == (_slimeObjects | (1 << layer)) && !IsActivated)
-            OnAddSlime();
+            OnAddSlime(other.gameObject);
         
         if (_bonusObjects == (_bonusObjects | (1 << layer)))
             Debug.Log("Slime pick bonus");
     }
 
-    void OnAddSlime()
+    void OnAddSlime(GameObject target)
     {
-        _onAddSlime?.Invoke(this);   
+        var hitSlime = target.GetComponent<SlimeController>();
+
+        if (hitSlime == null || hitSlime._controller == null) return;
+        
+        _controller = hitSlime._controller;
+        _controller.AddSlime(this);
+        _body.isKinematic = false;
     }
 
     void OnTargetLoose()
     {
-        _onDeath?.Invoke(this);
-        _target = null;
+        OnDeath();
     }
 
     void OnDeath()
     {
-        _onDeath?.Invoke(this);
-        gameObject.SetActive(false);
+        _controller?.RemoveSlime(this);
+        
+        Destroy();
+    }
+
+    public override void ResetState()
+    {
+        gameObject.SetActive(true);
+        IsActivated = false;
+        _body.isKinematic = true;
     }
 }
