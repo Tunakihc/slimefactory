@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -24,9 +25,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private SlimeController[] _startSlimes;
     [SerializeField] private float _speed;
-    [SerializeField] private Vector3 _minBounds;
-    [SerializeField] private Vector3 _maxBounds;
     [SerializeField] private Vector3 _inputBounds;
+    [SerializeField] private float _curve;
     
     List<SlimeInfo> _slimes = new List<SlimeInfo>();
     List<Transform> _transforms = new List<Transform>();
@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private Transform _slimesControllerObject;
 
+    private Action _onDeath;
+
     void Start()
     {
         Input.simulateMouseWithTouches = true;
@@ -42,6 +44,11 @@ public class PlayerController : MonoBehaviour
         _slimesControllerObject = new GameObject("SlimesController").transform;
         _slimesControllerObject.SetParent(transform);
         _slimesControllerObject.localPosition = Vector3.zero;
+    }
+
+    public void Init(Action onDeath)
+    {
+        _onDeath = onDeath;
     }
 
     public void Play()
@@ -88,28 +95,77 @@ public class PlayerController : MonoBehaviour
         }
 
         _slimesControllerObject.localPosition = transform.InverseTransformPoint(pos);
-
-        if (prevInput == isTouched) return;
         
-        for (int i = 0; i < _slimes.Count; i++)
-            SetSlimePos(_slimes[i]);
-
-        prevInput = isTouched;
+        UpdateSlimePositions();
     }
 
-    void SetSlimePos(SlimeInfo info)
+    void UpdateSlimePositions()
     {
-        var currentBounds = isTouched ? _minBounds : _maxBounds;
-        var bounds = new Bounds(_slimesControllerObject.position, currentBounds);
+        var inputBounds = new Bounds(transform.position, _inputBounds);
 
-        info.Target.position = RandomPointInBounds(bounds);
+        if (isTouched)
+        {
+
+            float radius = 0;
+            float angleStep = 0;
+            var prevSlimesCount = 0;
+            var slimesCount = 0f;
+
+            var _positions = new List<Vector3>();
+
+            for (int i = 0; i < _slimes.Count; i++)
+            {
+                if (slimesCount + prevSlimesCount < i)
+                {
+                    radius += _slimes[prevSlimesCount].Slime.Size;
+                    slimesCount = ((2 * Mathf.PI * radius) / _slimes[i].Slime.Size);
+                    angleStep = 360f / slimesCount;
+
+                    angleStep *= Mathf.Deg2Rad;
+                    prevSlimesCount = i;
+                }
+
+                var targetPos = _slimesControllerObject.position  + new Vector3(
+                                    radius * Mathf.Cos(angleStep * (i - prevSlimesCount)), 0,
+                                    radius * Mathf.Sin(angleStep * (i - prevSlimesCount)));
+
+                targetPos = inputBounds.ClosestPoint(targetPos);
+                
+                _positions.Add(targetPos);
+            }
+            
+            _positions.Sort((p1, p2) => p1.z > p2.z ? 1 : (p1.z == p2.z ? 0 : -1));
+
+            for (var i = 0; i < _slimes.Count; i++)
+                _slimes[i].Target.position = _positions[i];
+        }
+        else
+        {
+            var a = 0f;
+            var row = 0;
+            for (int i = 0; i < _slimes.Count; i++)
+            {
+                var targetPos = _slimesControllerObject.position + Vector3.right * (a * (i % 2 == 0 ? 1 : -1)) + Vector3.back * row;
+
+                targetPos = inputBounds.ClosestPoint(targetPos);
+                
+                _slimes[i].Target.position = targetPos;
+
+                if (a >= _inputBounds.x)
+                {
+                    row -= 1;
+                    a = 0;
+                }
+
+                if (i % 2 == 0)
+                    a += _slimes[i].Slime.Size;
+            }
+        }
     }
 
     public void AddSlime(SlimeController controller)
     {
         var newSlime = new SlimeInfo(controller, GetTransform());
-        SetSlimePos(newSlime);
-        
         _slimes.Add(newSlime);
     }
 
@@ -125,6 +181,9 @@ public class PlayerController : MonoBehaviour
             
             break;
         }
+
+        if (_slimes.Count <= 0)
+            _onDeath?.Invoke();
     }
 
     Transform GetTransform()
@@ -153,5 +212,18 @@ public class PlayerController : MonoBehaviour
             Random.Range(bounds.min.y, bounds.max.y),
             Random.Range(bounds.min.z, bounds.max.z)
         );
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        
+        for (int i = 0; i < _slimes.Count; i++)
+        {
+            if(i == 0) continue;
+            
+            Gizmos.DrawWireSphere(_slimes[i].Target.position,_slimes[i].Slime.Size/2);
+        
+        }
     }
 }

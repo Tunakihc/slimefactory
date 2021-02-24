@@ -6,8 +6,8 @@ public class SlimeController : PoolObject
 {
     [HideInInspector]
     public bool IsActivated = false;
-    [HideInInspector]
-    public int Size;
+
+    public float Size = 0.5f;
     
     [Header("Movement")]
     [SerializeField] private Rigidbody _body;
@@ -60,8 +60,8 @@ public class SlimeController : PoolObject
         targetVelocity.y = -9.8f;
         _body.velocity = Vector3.SmoothDamp(_body.velocity, targetVelocity, ref _velocity, 0.05f);
 
-        if (Vector3.Distance(_body.position, _target.position) > _maxTargetDistance) 
-            OnTargetLoose();
+        if (Vector3.Distance(_body.position, _target.position) > _maxTargetDistance)
+            Destroy();
     }
 
     private Vector3 _prevPos;
@@ -91,7 +91,7 @@ public class SlimeController : PoolObject
         var layer = other.gameObject.layer;
 
         if (_deathObjects == (_deathObjects | (1 << layer)))
-            OnDeath();
+            Destroy();
 
         if (_slimeObjects == (_slimeObjects | (1 << layer)) && !IsActivated)
             OnAddSlime(other.gameObject);
@@ -111,16 +111,11 @@ public class SlimeController : PoolObject
         _body.isKinematic = false;
     }
 
-    void OnTargetLoose()
-    {
-        OnDeath();
-    }
-
-    void OnDeath()
+    public override void Destroy()
     {
         _controller?.RemoveSlime(this);
         
-        Destroy();
+        base.Destroy();
     }
 
     public override void ResetState()

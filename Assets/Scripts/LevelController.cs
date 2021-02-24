@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Visartech.Levels;
 
 public class LevelController : MonoBehaviour
@@ -20,6 +21,8 @@ public class LevelController : MonoBehaviour
         _spawner = new LevelSpawner(new GameObject("_LevelSpawnerTarget").transform, _pool);
         
         PlayLevel(_levels.LevelConfigs[_testLevel]);
+        
+        _controller.Init(OnGameLoose);
     }
 
     public void PlayLevel(LevelConfig config)
@@ -29,11 +32,23 @@ public class LevelController : MonoBehaviour
         list.Add(_endPattern);
         
         _spawner.LoadLevel(list);
-        _controller.Play();
     }
 
+    private bool _isPlaying = false;
+    
     void Update()
     {
         _spawner.OnDistanceChanged(_controller.transform.position);
+
+        if (!_isPlaying && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
+        {
+            _isPlaying = true;
+            _controller.Play();
+        }
+    }
+
+    void OnGameLoose()
+    {
+        SceneManager.LoadScene(0);
     }
 }
