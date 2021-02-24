@@ -114,14 +114,19 @@ public class SlimeController : PoolObject
     public override void Destroy()
     {
         _controller?.RemoveSlime(this);
+        _controller = null;
+        _body.velocity = Vector3.zero;
+        _target = null;
         
         base.Destroy();
     }
 
     public override void ResetState()
     {
-        gameObject.SetActive(true);
         IsActivated = false;
         _body.isKinematic = true;
+        _controller = null;
+        _target = null;
+        
     }
 }

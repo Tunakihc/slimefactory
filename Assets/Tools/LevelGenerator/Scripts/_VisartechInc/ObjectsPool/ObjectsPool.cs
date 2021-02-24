@@ -40,6 +40,7 @@ public class ObjectsPool
         }
 
         reusableObject.IsActive = true;
+        reusableObject.ResetState();
         return reusableObject;
     }
 

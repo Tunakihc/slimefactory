@@ -6,7 +6,7 @@
       <LocalPosition>
         <x>0</x>
         <y>0</y>
-        <z>12.5</z>
+        <z>15.9840021</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -16,51 +16,7 @@
       <LocalScale>
         <x>10.1938181</x>
         <y>1</y>
-        <z>25</z>
-      </LocalScale>
-      <Settings>&lt;?xml version="1.0"?&gt;
-&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
-&lt;/PoolObjectInfo&gt;</Settings>
-    </ChildInfo>
-    <ChildInfo>
-      <ObjectName>DeathCube</ObjectName>
-      <LocalPosition>
-        <x>3.75</x>
-        <y>1.39</y>
-        <z>7.32</z>
-      </LocalPosition>
-      <LocalRotation>
-        <x>-0</x>
-        <y>41.71453</y>
-        <z>0</z>
-      </LocalRotation>
-      <LocalScale>
-        <x>4.830452</x>
-        <y>1.78920043</y>
-        <z>1.12547851</z>
-      </LocalScale>
-      <Settings>&lt;?xml version="1.0"?&gt;
-&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
-&lt;/PoolObjectInfo&gt;</Settings>
-    </ChildInfo>
-    <ChildInfo>
-      <ObjectName>DeathCube</ObjectName>
-      <LocalPosition>
-        <x>-2.8</x>
-        <y>1.44</y>
-        <z>16.2</z>
-      </LocalPosition>
-      <LocalRotation>
-        <x>-0</x>
-        <y>41.71453</y>
-        <z>0</z>
-      </LocalRotation>
-      <LocalScale>
-        <x>4.830452</x>
-        <y>1.84311688</y>
-        <z>1.12547851</z>
+        <z>32</z>
       </LocalScale>
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
@@ -72,7 +28,7 @@
       <LocalPosition>
         <x>0.448351741</x>
         <y>1.02</y>
-        <z>11.9021072</z>
+        <z>15.3861084</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -94,7 +50,7 @@
       <LocalPosition>
         <x>-2.29</x>
         <y>0.89</y>
-        <z>8.71</z>
+        <z>12.1940022</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -116,7 +72,7 @@
       <LocalPosition>
         <x>2.71</x>
         <y>0.89</y>
-        <z>15.84</z>
+        <z>19.3240013</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -133,11 +89,55 @@
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Saw</ObjectName>
+      <LocalPosition>
+        <x>-4.94</x>
+        <y>0.5</y>
+        <z>19.4240017</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>124.692169</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Saw</ObjectName>
+      <LocalPosition>
+        <x>5.37</x>
+        <y>0.5</y>
+        <z>11.9040022</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>124.692169</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
   </Childs>
   <EndPoint>
     <x>0</x>
     <y>0</y>
-    <z>25</z>
+    <z>31.9680042</z>
   </EndPoint>
   <Dir>
     <x>0</x>

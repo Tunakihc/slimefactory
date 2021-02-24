@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 
-public abstract class PoolObject : MonoBehaviour
+public abstract class PoolObject : PoolObjectTransform
 {
-    public class PoolObjectInfo
-    {
-        public bool SelfDestroy;
-    }
-    
     public virtual string SerializeSettings()
     {
         var infoClass = new PoolObjectInfo();
+
+        GetTransformInfo(infoClass);
 
         infoClass.SelfDestroy = SelfDestroy;
 
@@ -19,6 +16,8 @@ public abstract class PoolObject : MonoBehaviour
     public virtual void AcceptSettings(string info)
     {
         var infoClass = Helpers.XMLHelper.Deserialize<PoolObjectInfo>(info);
+
+        AcceptTransformInfo(infoClass);
 
         SelfDestroy = infoClass.SelfDestroy;
     }
