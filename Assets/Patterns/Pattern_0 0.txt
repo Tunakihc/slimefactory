@@ -23,6 +23,116 @@
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
+    <ChildInfo>
+      <ObjectName>DeathCube</ObjectName>
+      <LocalPosition>
+        <x>3.75</x>
+        <y>1.39</y>
+        <z>7.32</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>41.71453</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>4.830452</x>
+        <y>1.78920043</y>
+        <z>1.12547851</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>DeathCube</ObjectName>
+      <LocalPosition>
+        <x>-2.8</x>
+        <y>1.44</y>
+        <z>16.2</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>41.71453</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>4.830452</x>
+        <y>1.84311688</y>
+        <z>1.12547851</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>0.448351741</x>
+        <y>1.02</y>
+        <z>11.9021072</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Slime</ObjectName>
+      <LocalPosition>
+        <x>-2.29</x>
+        <y>0.89</y>
+        <z>8.71</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>0.7</x>
+        <y>0.7</y>
+        <z>0.7</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Slime</ObjectName>
+      <LocalPosition>
+        <x>2.71</x>
+        <y>0.89</y>
+        <z>15.84</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>0.7</x>
+        <y>0.7</y>
+        <z>0.7</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
   </Childs>
   <EndPoint>
     <x>0</x>

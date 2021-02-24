@@ -35,7 +35,7 @@ public class ObjectSerializer
         var childCount = targetObject.childCount;
         var childsInfo = new List<ChildInfo>();
         var objectBounds = targetObject.gameObject.GetMaxBounds();
-        var center = patternSettings.FixCenter ? patternSettings.Center : objectBounds.center;
+        // var center = patternSettings.FixCenter ? patternSettings.Center : objectBounds.center;
 
         PoolObject child = null;
         // ObjectInfo childInfo = null;
@@ -57,7 +57,7 @@ public class ObjectSerializer
             var info = new ChildInfo()
             {
                 ObjectName = childInfo,
-                LocalPosition = patternSettings._StartPoint.InverseTransformPoint(child.transform.position - center),
+                LocalPosition = patternSettings._StartPoint.InverseTransformPoint(child.transform.position),
                 LocalRotation = patternSettings._StartPoint.localEulerAngles + child.transform.eulerAngles,
                 LocalScale = child.transform.localScale,
                 Settings = child.SerializeSettings()

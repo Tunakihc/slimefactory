@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<PatternObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Childs>
+    <ChildInfo>
+      <ObjectName>Ground</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>0</y>
+        <z>4.282554</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>10.1938181</x>
+        <y>1</y>
+        <z>8.565108</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>1.36</y>
+        <z>7.61255455</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>4.04</x>
+        <y>-2.09</y>
+        <z>16.6625557</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>1.36</y>
+        <z>35.7725525</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Slime</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>0.93</y>
+        <z>3.334927</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>0.7</x>
+        <y>0.7</y>
+        <z>0.7</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Slime</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>0.88</y>
+        <z>40.2725563</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>0.7</x>
+        <y>0.7</y>
+        <z>0.7</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Ground</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>0</y>
+        <z>39.8125534</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>10.1938181</x>
+        <y>1</y>
+        <z>13.4515</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Ground</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>-1.59</y>
+        <z>30.4615555</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>330.2389</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>5.09130239</x>
+        <y>1</y>
+        <z>6.681091</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Ground</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>-1.59</y>
+        <z>11.2325544</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>29.7609959</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>5.09130239</x>
+        <y>1</y>
+        <z>6.681091</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Ground</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>-3.3</y>
+        <z>20.8825531</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>11.9838533</x>
+        <y>1</y>
+        <z>14.124074</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>3.8</x>
+        <y>-2.09</y>
+        <z>24.8325539</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Slime</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>-2.24</y>
+        <z>20.5825539</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>0.7</x>
+        <y>0.7</y>
+        <z>0.7</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>-0.03</x>
+        <y>-2.09</y>
+        <z>24.8325539</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>-4.04</x>
+        <y>-2.09</y>
+        <z>24.8325539</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>0.06</x>
+        <y>-2.09</y>
+        <z>16.6625557</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>-4.17</x>
+        <y>-2.09</y>
+        <z>16.6625557</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>-4.17</x>
+        <y>-2.09</y>
+        <z>20.4925537</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>3.95</x>
+        <y>-2.09</y>
+        <z>20.4925537</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>0</x>
+        <y>1.36</y>
+        <z>44.8525543</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>3.53</x>
+        <y>1.36</y>
+        <z>40.2325554</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+    <ChildInfo>
+      <ObjectName>Coin</ObjectName>
+      <LocalPosition>
+        <x>-3.68</x>
+        <y>1.36</y>
+        <z>40.2325554</z>
+      </LocalPosition>
+      <LocalRotation>
+        <x>-0</x>
+        <y>0</y>
+        <z>0</z>
+      </LocalRotation>
+      <LocalScale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </LocalScale>
+      <Settings>&lt;?xml version="1.0"?&gt;
+&lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+&lt;/PoolObjectInfo&gt;</Settings>
+    </ChildInfo>
+  </Childs>
+  <EndPoint>
+    <x>0</x>
+    <y>0</y>
+    <z>46.5383034</z>
+  </EndPoint>
+  <Dir>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </Dir>
+</PatternObjectInfo>
