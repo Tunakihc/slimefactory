@@ -8,6 +8,7 @@ public class SlimeController : PoolObject
     public bool IsActivated = false;
 
     public float Size = 0.5f;
+    public int SlimeMass = 1;
     
     [Header("Movement")]
     [SerializeField] private Rigidbody _body;
@@ -46,6 +47,14 @@ public class SlimeController : PoolObject
         _collisionEmmiter.SetActive(true);
     }
 
+    public void SetFinish()
+    {
+        _target = null;
+        IsActivated = true;
+        _body.isKinematic = true;
+        _controller = null;
+    }
+
     void FixedUpdate()
     {
         if(_target == null) return;
@@ -54,7 +63,7 @@ public class SlimeController : PoolObject
         dir.y = 0;
         dir = dir.normalized;
 
-        var _power = Mathf.Clamp(Vector3.Distance(_body.position, _target.position) / 1, 0, 1);
+        var _power = Mathf.Clamp(Vector3.Distance(_body.position, _target.position) / 3, 0.3f, 1);
         var targetVelocity = dir * (_speed * _power);
 
         targetVelocity.y = -9.8f;
@@ -66,6 +75,7 @@ public class SlimeController : PoolObject
 
     private Vector3 _prevPos;
     private float _jumpProgress;
+
     void Update()
     {
         _view.rotation = quaternion.identity;
@@ -76,7 +86,7 @@ public class SlimeController : PoolObject
         {
             _jumpProgress += Time.deltaTime * (_jumpTime * currentSpeed);
             
-            _view.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * _jumpHeight,
+            _view.position =  Vector3.Lerp(transform.position, transform.position + Vector3.up * _jumpHeight,
                 _jumpCurve.Evaluate(_jumpProgress));
         }
 
@@ -117,6 +127,8 @@ public class SlimeController : PoolObject
         _controller = null;
         _body.velocity = Vector3.zero;
         _target = null;
+
+        LevelController.Instance.Pool.GetObjectOfType<ParticlePoolObject>("SlimeSplash").transform.position = transform.position;
         
         base.Destroy();
     }
@@ -127,6 +139,5 @@ public class SlimeController : PoolObject
         _body.isKinematic = true;
         _controller = null;
         _target = null;
-        
     }
 }

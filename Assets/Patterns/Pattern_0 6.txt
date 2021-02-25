@@ -5,8 +5,8 @@
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
         <x>3.5399518</x>
-        <y>0.89</y>
-        <z>26.27824</z>
+        <y>0.8798494</y>
+        <z>26.38631</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -42,8 +42,8 @@
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
         <x>-3.56000042</x>
-        <y>0.89</y>
-        <z>15.6682091</z>
+        <y>0.8798494</y>
+        <z>15.7762794</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -79,8 +79,8 @@
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
         <x>2.54005384</x>
-        <y>0.89</y>
-        <z>3.66823673</z>
+        <y>0.8798494</y>
+        <z>3.776307</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -116,8 +116,8 @@
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
         <x>-3.07997084</x>
-        <y>1.02</y>
-        <z>9.038209</z>
+        <y>1.00984931</y>
+        <z>9.146279</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -153,8 +153,8 @@
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
         <x>-3.78003144</x>
-        <y>1.02</y>
-        <z>22.7582073</z>
+        <y>1.00984931</y>
+        <z>22.8662777</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -189,9 +189,9 @@
     <ChildInfo>
       <ObjectName>Hole</ObjectName>
       <LocalPosition>
-        <x>0</x>
-        <y>0</y>
-        <z>15.5782251</z>
+        <x>5.853508E-09</x>
+        <y>-0.0101506114</y>
+        <z>15.6862955</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>

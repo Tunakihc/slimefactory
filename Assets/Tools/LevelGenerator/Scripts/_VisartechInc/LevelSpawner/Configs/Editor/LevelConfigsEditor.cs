@@ -25,6 +25,8 @@ public class LevelConfigsEditor : Editor {
                 EditorGUI.LabelField(
                     new Rect(rect.x + 10, rect.y, 55, EditorGUIUtility.singleLineHeight),
                     (index + 1).ToString());
+                element.FindPropertyRelative("SlimesCount").intValue = EditorGUI.IntField(new Rect(rect.x + 65, rect.y, 55, EditorGUIUtility.singleLineHeight),
+                    element.FindPropertyRelative("SlimesCount").intValue);
 
                 if (isFocused) {
                     _innerList = new ReorderableList(serializedObject, 

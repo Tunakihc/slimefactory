@@ -34,7 +34,9 @@ public struct ConfigsByDifficultyConfig {
 }
 
 [Serializable]
-public struct LevelConfig {
+public struct LevelConfig
+{
+    public int SlimesCount;
     public TextAsset[] TextAssets;
 }
 

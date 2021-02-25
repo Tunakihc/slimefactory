@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     List<SlimeInfo> _slimes = new List<SlimeInfo>();
     List<Transform> _transforms = new List<Transform>();
 
-    private bool _isEnabled;
+    public bool _isEnabled;
 
     private Transform _slimesControllerObject;
 

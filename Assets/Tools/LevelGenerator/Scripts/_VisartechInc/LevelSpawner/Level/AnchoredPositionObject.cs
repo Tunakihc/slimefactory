@@ -6,7 +6,7 @@ using UnityEngine;
 public class AnchoredPositionObject : MonoBehaviour
 {
     [SerializeField] private GameObject _targetObject;
-    [SerializeField] private Vector3 _anchorPosition;
+    [SerializeField] private Vector3 _anchorPosition = new Vector3(0.5f, 0.5f, 0.5f);
 
     void Update()
     {
@@ -14,9 +14,9 @@ public class AnchoredPositionObject : MonoBehaviour
 
         var parent = _targetObject.GetMaxBounds();
 
-        transform.position = _targetObject.transform.position + new Vector3((parent.size.x/2) * _anchorPosition.x,
-            (parent.size.y/2) * _anchorPosition.y,
-            (parent.size.z/2) * _anchorPosition.z);
+        transform.position =new Vector3(Mathf.Lerp(parent.min.x, parent.max.x, _anchorPosition.x),
+            Mathf.Lerp(parent.min.y, parent.max.y, _anchorPosition.y),
+            Mathf.Lerp(parent.min.z, parent.max.z, _anchorPosition.z));
 
     }
 }
