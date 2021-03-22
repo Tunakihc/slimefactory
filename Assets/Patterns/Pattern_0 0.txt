@@ -4,9 +4,9 @@
     <ChildInfo>
       <ObjectName>Ground</ObjectName>
       <LocalPosition>
-        <x>0</x>
-        <y>0</y>
-        <z>15.9840021</z>
+        <x>5.62781525</x>
+        <y>0.4300001</y>
+        <z>15.9840012</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -21,13 +21,28 @@
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+  &lt;Movement&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+    &lt;AnchorPositionOnce&gt;false&lt;/AnchorPositionOnce&gt;
+  &lt;/Movement&gt;
+  &lt;Rotation&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+  &lt;/Rotation&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>0.448351741</x>
-        <y>1.02</y>
+        <x>6.076167</x>
+        <y>1.45</y>
         <z>15.3861084</z>
       </LocalPosition>
       <LocalRotation>
@@ -43,14 +58,29 @@
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+  &lt;Movement&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+    &lt;AnchorPositionOnce&gt;false&lt;/AnchorPositionOnce&gt;
+  &lt;/Movement&gt;
+  &lt;Rotation&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+  &lt;/Rotation&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>-2.29</x>
-        <y>0.89</y>
-        <z>12.1940022</z>
+        <x>3.33781528</x>
+        <y>1.32</y>
+        <z>12.1940012</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -65,13 +95,28 @@
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+  &lt;Movement&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+    &lt;AnchorPositionOnce&gt;false&lt;/AnchorPositionOnce&gt;
+  &lt;/Movement&gt;
+  &lt;Rotation&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+  &lt;/Rotation&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>2.71</x>
-        <y>0.89</y>
+        <x>8.337815</x>
+        <y>1.32</y>
         <z>19.3240013</z>
       </LocalPosition>
       <LocalRotation>
@@ -87,13 +132,28 @@
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+  &lt;Movement&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+    &lt;AnchorPositionOnce&gt;false&lt;/AnchorPositionOnce&gt;
+  &lt;/Movement&gt;
+  &lt;Rotation&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+  &lt;/Rotation&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
     <ChildInfo>
       <ObjectName>Saw</ObjectName>
       <LocalPosition>
-        <x>-4.94</x>
-        <y>0.5</y>
+        <x>0.6878152</x>
+        <y>0.930000067</y>
         <z>19.4240017</z>
       </LocalPosition>
       <LocalRotation>
@@ -109,14 +169,29 @@
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+  &lt;Movement&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+    &lt;AnchorPositionOnce&gt;false&lt;/AnchorPositionOnce&gt;
+  &lt;/Movement&gt;
+  &lt;Rotation&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+  &lt;/Rotation&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
     <ChildInfo>
       <ObjectName>Saw</ObjectName>
       <LocalPosition>
-        <x>5.37</x>
-        <y>0.5</y>
-        <z>11.9040022</z>
+        <x>10.9978151</x>
+        <y>0.930000067</y>
+        <z>11.9040012</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -131,6 +206,21 @@
       <Settings>&lt;?xml version="1.0"?&gt;
 &lt;PoolObjectInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;SelfDestroy&gt;false&lt;/SelfDestroy&gt;
+  &lt;Movement&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+    &lt;AnchorPositionOnce&gt;false&lt;/AnchorPositionOnce&gt;
+  &lt;/Movement&gt;
+  &lt;Rotation&gt;
+    &lt;Duration&gt;0&lt;/Duration&gt;
+    &lt;IsForward&gt;true&lt;/IsForward&gt;
+    &lt;Loop&gt;false&lt;/Loop&gt;
+    &lt;EnableCycle&gt;false&lt;/EnableCycle&gt;
+    &lt;Ease&gt;Unset&lt;/Ease&gt;
+  &lt;/Rotation&gt;
 &lt;/PoolObjectInfo&gt;</Settings>
     </ChildInfo>
   </Childs>

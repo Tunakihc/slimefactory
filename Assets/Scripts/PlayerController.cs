@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private Vector3 _inputBounds;
     [SerializeField] private float _curve;
+    [SerializeField] private float _slowDownPower = 8;
+    [SerializeField] float _slowDownDistance = 5;
     
     List<SlimeInfo> _slimes = new List<SlimeInfo>();
     List<Transform> _transforms = new List<Transform>();
@@ -66,8 +68,24 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if(_slimesControllerObject == null || !_isEnabled) return;
-        
-        transform.position += transform.forward * Time.deltaTime * _speed;
+
+        var slimesPosition = 0f;
+        var slowDownPower = 0f;
+
+        if (_slimes.Count > 0)
+        {
+            for (int i = 0; i < _slimes.Count; i++)
+            {
+                slimesPosition += Vector3.Distance(_slimes[i].Slime.transform.position, _slimes[i].Target.position);
+            }
+
+            slimesPosition /= _slimes.Count;
+            
+            slowDownPower = slimesPosition / _slowDownDistance;
+            slowDownPower = Mathf.Clamp(slowDownPower, 0, 1);
+        }
+
+        transform.position += transform.forward * Time.deltaTime * (_speed-slowDownPower * _slowDownPower);
 
         UpdateInput();
     }
@@ -178,8 +196,6 @@ public class PlayerController : MonoBehaviour
             _slimes[i].Target.gameObject.SetActive(false);
             
             _slimes.RemoveAt(i);
-            
-            break;
         }
 
         if (_slimes.Count <= 0)

@@ -4,9 +4,9 @@
     <ChildInfo>
       <ObjectName>Ground</ObjectName>
       <LocalPosition>
-        <x>0</x>
-        <y>0</y>
-        <z>15.9840021</z>
+        <x>1.90734863E-06</x>
+        <y>-0.008281231</y>
+        <z>15.9840012</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -41,9 +41,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>0.06</x>
-        <y>1.02</y>
-        <z>15.854002</z>
+        <x>0.060001906</x>
+        <y>1.01171875</y>
+        <z>15.854001</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -78,9 +78,9 @@
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>-3.54</x>
-        <y>0.89</y>
-        <z>12.1940022</z>
+        <x>-3.539998</x>
+        <y>0.881718755</y>
+        <z>12.1940012</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -115,9 +115,9 @@
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>3.95</x>
-        <y>0.89</y>
-        <z>19.9540024</z>
+        <x>3.950002</x>
+        <y>0.881718755</y>
+        <z>19.954</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -152,8 +152,8 @@
     <ChildInfo>
       <ObjectName>Saw</ObjectName>
       <LocalPosition>
-        <x>-5.34</x>
-        <y>0.5</y>
+        <x>-5.33999825</x>
+        <y>0.491718769</y>
         <z>24.0440025</z>
       </LocalPosition>
       <LocalRotation>
@@ -201,9 +201,9 @@
     <ChildInfo>
       <ObjectName>Saw</ObjectName>
       <LocalPosition>
-        <x>5.38</x>
-        <y>0.5</y>
-        <z>7.594002</z>
+        <x>5.380002</x>
+        <y>0.491718769</y>
+        <z>7.594001</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -250,9 +250,9 @@
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>3.86</x>
-        <y>0.89</y>
-        <z>12.1940022</z>
+        <x>3.8600018</x>
+        <y>0.881718755</y>
+        <z>12.1940012</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -287,9 +287,9 @@
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>-3.55</x>
-        <y>0.89</y>
-        <z>19.8840027</z>
+        <x>-3.549998</x>
+        <y>0.881718755</y>
+        <z>19.884</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -324,9 +324,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>-3.2</x>
-        <y>1.02</y>
-        <z>4.04400253</z>
+        <x>-3.19999814</x>
+        <y>1.01171875</y>
+        <z>4.04400158</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -361,9 +361,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>2.77</x>
-        <y>1.02</y>
-        <z>4.04400253</z>
+        <x>2.770002</x>
+        <y>1.01171875</y>
+        <z>4.04400158</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -398,8 +398,8 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>2.77</x>
-        <y>1.02</y>
+        <x>2.770002</x>
+        <y>1.01171875</y>
         <z>27.6840019</z>
       </LocalPosition>
       <LocalRotation>
@@ -435,9 +435,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>-3.93</x>
-        <y>1.02</y>
-        <z>27.3340034</z>
+        <x>-3.92999816</x>
+        <y>1.01171875</y>
+        <z>27.3340015</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -472,9 +472,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>3.96</x>
-        <y>1.02</y>
-        <z>15.854002</z>
+        <x>3.960002</x>
+        <y>1.01171875</y>
+        <z>15.854001</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -509,9 +509,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>-3.5</x>
-        <y>1.02</y>
-        <z>15.854002</z>
+        <x>-3.499998</x>
+        <y>1.01171875</y>
+        <z>15.854001</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -546,9 +546,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>-1.78</x>
-        <y>1.02</y>
-        <z>15.854002</z>
+        <x>-1.77999806</x>
+        <y>1.01171875</y>
+        <z>15.854001</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>
@@ -583,9 +583,9 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>2.16</x>
-        <y>1.02</y>
-        <z>15.854002</z>
+        <x>2.160002</x>
+        <y>1.01171875</y>
+        <z>15.854001</z>
       </LocalPosition>
       <LocalRotation>
         <x>-0</x>

@@ -55,7 +55,7 @@ public class TweenRotation : MonoBehaviour, TweenObject
 
     public void PlayTween(Action onFinish = null) {
         _onFinish = onFinish;
-
+        
         if (Settings?.Rotations == null || Settings.Rotations.Length < 2) return;
         
         var segmentDuration = Settings.Duration / Settings.Rotations.Length;

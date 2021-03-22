@@ -13,7 +13,7 @@ namespace Visartech.Levels
             _targetingObject = targetingObject;
         }
 
-        const int SpawnRadius = 130;
+        const int SpawnRadius = 200;
         const int ClearRadius = 10;
         
         static readonly Vector3 StartPos = new Vector3(0, 0, -5);

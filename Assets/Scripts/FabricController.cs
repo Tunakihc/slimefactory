@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Cinemachine;
 using DG.Tweening;
 using PathCreation;
 using UnityEngine;
+using Visartech.Progress;
 
 public class FabricController : PoolObject
 {
@@ -148,17 +150,11 @@ public class FabricController : PoolObject
         {
             for (int i = 0; i < _workParticless.Length; i++)
                 _workParticless[i].SetActive(false);
-            
-            for (int i = 0; i < _steamParticless.Length; i++)
-                _steamParticless[i].SetActive(false);
-            
 
             if (!(t >= 1)) return;
             
             for (int i = 0; i < _finishParticless.Length; i++)
                 _finishParticless[i].SetActive(true);
-            
-  
         });
         
         _liquidAnimation.AppendInterval(t >= 1 ? 3 : 1);
@@ -202,7 +198,7 @@ public class FabricController : PoolObject
 
         _slimesInside.Clear();
         
-        _currentSlimeMass = LevelController.Instance.GetCurrentSlimesCount();
+        _currentSlimeMass = Progress.Player.CurrentSlimes;
         _targetSlimeMass = LevelController.Instance.GetTargetSlimesCount();
         var progress = (float) _currentSlimeMass / _targetSlimeMass;
         _liquidMaterial.SetFloat("Vector1_8d1c1cd0d86844fe92c5faf600825729",Mathf.Lerp(_minHeigh, _maxHeight, progress));

@@ -25,6 +25,8 @@ public class SlimeController : PoolObject
     [SerializeField] private float _jumpHeight;
     [SerializeField] private AnimationCurve _jumpCurve;
     [SerializeField] private float _jumpTime;
+    [SerializeField] private Vector3 _jumpScale;
+    [SerializeField] private Vector3 _landScale;
 
     Transform _target;
     private Vector3 _prevPosition;
@@ -88,6 +90,7 @@ public class SlimeController : PoolObject
             
             _view.position =  Vector3.Lerp(transform.position, transform.position + Vector3.up * _jumpHeight,
                 _jumpCurve.Evaluate(_jumpProgress));
+            _view.localScale = Vector3.Lerp(_landScale, _jumpScale, _jumpCurve.Evaluate(_jumpProgress));
         }
 
         _prevPos = transform.position;
@@ -123,8 +126,12 @@ public class SlimeController : PoolObject
 
     public override void Destroy()
     {
-        _controller?.RemoveSlime(this);
-        _controller = null;
+        if (_controller != null)
+        {
+            _controller.RemoveSlime(this);
+            _controller = null;
+        }
+
         _body.velocity = Vector3.zero;
         _target = null;
 

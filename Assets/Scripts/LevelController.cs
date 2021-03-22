@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Visartech.Levels;
+using Visartech.Progress;
 
 public class LevelController : MonoBehaviour
 {
@@ -21,7 +23,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] private int _testLevel;
     [SerializeField] private bool _isTest = false;
     [SerializeField] private LevelsConfig _levels;
-    [SerializeField] private PlayerController _controller;
+    [SerializeField] private int _endLevelsCount = 8;
+    public PlayerController _controller;
 
     [SerializeField] private TextAsset _startPattern;
     [SerializeField] private TextAsset _endPattern;
@@ -36,19 +39,30 @@ public class LevelController : MonoBehaviour
         Pool = new ObjectsPool(transform);
         _spawner = new LevelSpawner(new GameObject("_LevelSpawnerTarget").transform, Pool);
 
-        _currentLevel = _isTest ? _testLevel : (PlayerPrefs.HasKey("CurrentLevel") ? PlayerPrefs.GetInt("CurrentLevel") : 0);
-
-        PlayLevel(_levels.LevelConfigs[_currentLevel]);
+        PlayLevel();
         
         _controller.Init(OnGameLoose);
     }
 
-    public void PlayLevel(LevelConfig config)
+    public void PlayLevel()
     {
-        var list = config.TextAssets.ToList();
+        bool endGame = false;
+        
+        _currentLevel = _isTest ? _testLevel : Progress.Player.CurrentLevel;
+        
+        if (_currentLevel >= _levels.LevelConfigs.Count)
+        {
+            _currentLevel = _levels.LevelConfigs.Count - 1;
+            endGame = true;
+        }
+        
+        var list = _levels.LevelConfigs[_currentLevel].TextAssets.ToList();
 
-        if (GetCurrentSlimesCount() > 0 || (PlayerPrefs.HasKey("PlayedLevel") && PlayerPrefs.GetInt("PlayedLevel") > 0))
+        if (Progress.Player.CurrentSlimes > 0 || Progress.Player.PlayedLevel || endGame)
             list = Reshuffle(list);
+
+        if (endGame && list.Count > _endLevelsCount)
+            list = list.GetRange(0, _endLevelsCount);
 
         list.Insert(0, _startPattern);
         list.Add(_endPattern);
@@ -73,13 +87,18 @@ public class LevelController : MonoBehaviour
     
     void OnGameLoose()
     {
-        if (!_isFinishState)
-        {
+        if (_isFinishState) return;
+
+        var sequence = DOTween.Sequence();
+
+        sequence.AppendInterval(2);
+        sequence.onComplete = () => { 
             ReloadLevel();
-            PlayerPrefs.SetInt("PlayedLevel",1);
-        }
+            Progress.Player.PlayedLevel = true; 
+        };
+        _controller._isEnabled = false;
     }
-    
+
     public void InitFinishState()
     {
         _isFinishState = true;
@@ -89,14 +108,12 @@ public class LevelController : MonoBehaviour
     {
         if (slimesCount >= _levels.LevelConfigs[_currentLevel].SlimesCount)
         {
-            PlayerPrefs.SetInt("CurrentLevel", _currentLevel++);
-            PlayerPrefs.SetInt("CurrentSlimesCount", 0);
-            PlayerPrefs.SetInt("PlayedLevel", 0);
+            Progress.Player.CurrentLevel += 1;
+            Progress.Player.CurrentSlimes = 0;
+            Progress.Player.PlayedLevel = false;
         }
         else
-        {
-            PlayerPrefs.SetInt("CurrentSlimesCount", slimesCount);
-        }
+            Progress.Player.CurrentSlimes = slimesCount;
 
         ReloadLevel();
     }
@@ -104,11 +121,6 @@ public class LevelController : MonoBehaviour
     public int GetTargetSlimesCount()
     {
         return _levels.LevelConfigs[_currentLevel].SlimesCount;
-    }
-    
-    public int GetCurrentSlimesCount()
-    {
-        return PlayerPrefs.HasKey("CurrentSlimesCount") ? PlayerPrefs.GetInt("CurrentSlimesCount") : 0;
     }
 
     void ReloadLevel()

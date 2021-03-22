@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bottle 3
+  m_Shader: {fileID: -6465566751694194690, guid: 4ffc283cdf7564045a352c8c4a90ab9b, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_14998e3186454ae6af889650eebd5da9: 0.05
+    - Vector1_67bd7f24bd7f43339fda06cd3dac896c: 5
+    - Vector1_8d1c1cd0d86844fe92c5faf600825729: 3.34
+    - Vector1_b1fb24805285402bb98e10d1aa3edb52: 0.56
+    m_Colors:
+    - Color_a18969ae99914a6ca64481a207125bc4: {r: 0.34845945, g: 0.9245283, b: 0.2660199, a: 0}
+    - Color_ef5af6306ede4e01b43cb6411ff3a456: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
