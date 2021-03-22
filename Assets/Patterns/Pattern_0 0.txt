@@ -4,8 +4,8 @@
     <ChildInfo>
       <ObjectName>Ground</ObjectName>
       <LocalPosition>
-        <x>5.62781525</x>
-        <y>0.4300001</y>
+        <x>1.90734863E-06</x>
+        <y>-0.008281231</y>
         <z>15.9840012</z>
       </LocalPosition>
       <LocalRotation>
@@ -41,8 +41,8 @@
     <ChildInfo>
       <ObjectName>Coin</ObjectName>
       <LocalPosition>
-        <x>6.076167</x>
-        <y>1.45</y>
+        <x>0.448353648</x>
+        <y>1.01171875</y>
         <z>15.3861084</z>
       </LocalPosition>
       <LocalRotation>
@@ -78,8 +78,8 @@
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>3.33781528</x>
-        <y>1.32</y>
+        <x>-2.289998</x>
+        <y>0.881718755</y>
         <z>12.1940012</z>
       </LocalPosition>
       <LocalRotation>
@@ -115,8 +115,8 @@
     <ChildInfo>
       <ObjectName>Slime</ObjectName>
       <LocalPosition>
-        <x>8.337815</x>
-        <y>1.32</y>
+        <x>2.710002</x>
+        <y>0.881718755</y>
         <z>19.3240013</z>
       </LocalPosition>
       <LocalRotation>
@@ -152,8 +152,8 @@
     <ChildInfo>
       <ObjectName>Saw</ObjectName>
       <LocalPosition>
-        <x>0.6878152</x>
-        <y>0.930000067</y>
+        <x>-4.939998</x>
+        <y>0.491718769</y>
         <z>19.4240017</z>
       </LocalPosition>
       <LocalRotation>
@@ -189,8 +189,8 @@
     <ChildInfo>
       <ObjectName>Saw</ObjectName>
       <LocalPosition>
-        <x>10.9978151</x>
-        <y>0.930000067</y>
+        <x>5.370002</x>
+        <y>0.491718769</y>
         <z>11.9040012</z>
       </LocalPosition>
       <LocalRotation>
